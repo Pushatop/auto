@@ -6,7 +6,7 @@ from time import sleep
 photo = "photo.png" # сюда абсольютний путь к фото если вы на телефоне на пк можно указывать только название если файл в папке в которой скрипт
 key = input('Введите ключ')
 uri = "mongodb+srv://dany:Dan098070@cluster0.1disjcs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-client = MongoClient(uri, server_api=ServerApi('1'))
+client = MongoClient(uri)
 db = client.piar_bit
 coll = db.keys
 data = coll.find_one(filter={"_key": key})
